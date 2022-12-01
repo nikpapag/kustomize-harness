@@ -13,3 +13,5 @@ spec:
            value: <+env.name>
          - name: ENV_TYPE
            value: <+env.type>
+         - name: COUNTRY
+           value: <+env.variables.country>
