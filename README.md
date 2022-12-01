@@ -1,1 +1,1 @@
-# kustomiza-harness
+# kustomize-harness
