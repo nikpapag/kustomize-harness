@@ -10,3 +10,4 @@ resources:
 
 patches:
 - namespace.yaml
+- deployment.yaml
