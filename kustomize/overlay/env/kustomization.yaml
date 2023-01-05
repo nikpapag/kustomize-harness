@@ -5,7 +5,5 @@ resources:
   - namespace.yaml
 
 patchesStrategicMerge:
-- path: namespace.yaml
-  target:
-    kind: Namespace
-    name: default
+- namespace.yaml
+
