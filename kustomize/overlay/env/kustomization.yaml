@@ -10,4 +10,4 @@ patches:
   patch: |-
     - op: replace
       path: /metadata/namespace
-      value: payment-service
+      value: <+pipeline.name>
