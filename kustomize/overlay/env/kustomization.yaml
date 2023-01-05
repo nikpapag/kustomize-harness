@@ -4,8 +4,3 @@ resources:
   - ../../base
   - namespace.yaml
 
-patches:
-- path: namespace.yaml
-  target:
-    kind: Namespace
-    name: default
