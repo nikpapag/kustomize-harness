@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: <+pipeline.variables.namespacek8s>
+  name: mynamespace
