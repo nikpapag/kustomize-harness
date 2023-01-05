@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
   - ../../base
+
+
+patches:
+- path: deployment.yaml
+- path: namespace.yaml
