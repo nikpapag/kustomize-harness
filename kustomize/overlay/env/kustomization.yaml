@@ -5,6 +5,9 @@ resources:
   - ../../base
   
 patches:
-- path: namespace.yaml
-  target:
-    kind: Namespace
+- target:
+    kind: Deployment
+  patch: |-
+    - op: replace
+      path: /metadata/namespace
+      value: payment-service
