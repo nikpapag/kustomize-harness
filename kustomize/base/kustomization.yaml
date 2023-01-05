@@ -9,5 +9,5 @@ resources:
 - namespace.yaml
 
 patches:
-- namespace.yaml
-- deployment.yaml
+- path: namespace.yaml
+- path: deployment.yaml
