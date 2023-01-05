@@ -7,3 +7,6 @@ commonLabels:
 resources:
 - deployment.yaml
 - namespace.yaml
+
+patches:
+- namespace.yaml
