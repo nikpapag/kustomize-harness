@@ -2,7 +2,7 @@ kind: Kustomization
 
 resources:
   - ../../base
-  - namespace.yaml
+
 
 patchesStrategicMerge:
 - namespace.yaml
