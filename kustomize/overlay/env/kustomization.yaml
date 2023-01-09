@@ -7,4 +7,5 @@ resources:
 
 patchesStrategicMerge:
 - namespace.yaml
+- deployment.yaml
 
