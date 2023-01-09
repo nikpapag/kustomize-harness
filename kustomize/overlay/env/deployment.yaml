@@ -1,16 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: example-deploy
+  name: example-deploy
+  labels:
+    app: example-app
+  annotations:
 spec:
- template :
-   spec:
-     containers:
-       - name: example-app
-         env:
-         - name: ENV_NAME
-           value: <+env.name>
-         - name: ENV_TYPE
-           value: <+env.type>
-         - name: COUNTRY
-           value: <+env.variables.country>
+  selector:
+    matchLabels:
+      app: example-app
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: example-app
+    spec:
+      containers:
+      - name: example-app
+        image: <+pipeline.variables.image>
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DEMO_USERNAME
+          value: <+pipeline.variables.username>
+        - name: DEMO_PASSWORD
+          value: HarnessSecretVariable_dbpassword
